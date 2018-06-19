@@ -1,7 +1,11 @@
 /* General Formatting for all pages */
-html, body {
-    height: 100%;
+html {
+    position: relative;
+    min-height: 100%;
+  }
+body {
     margin: 0;
+    position: relative;
   }
 h1{
     color: white;
@@ -24,11 +28,11 @@ p{
     background:#ffffff;
     height:70px;
     border-bottom: 1px solid #cccccc;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+    position: relative;
     top: 0;
     left: 0;
+    width: 100%;
+    z-index: 10;
 }
 #name_box {
     color: white;
@@ -37,7 +41,8 @@ p{
     padding: 20px;
     height:30px;
     float:left;
-    position: fixed;
+    position: relative;
+    top: 0px;
     left: 10px;
 }
 #links_area {
@@ -46,8 +51,9 @@ p{
     text-decoration:none;
     padding: 25px;
     float: left;
-    position: fixed;
-    left: 470px;
+    position: relative;
+    top: 0;
+    left: 280px;
 }
 .link{
     color: gray;
@@ -61,46 +67,38 @@ p{
 footer {
     color: lightgray;
     background: #666666;
-    height:20px;
+    height:30px;
+    line-height: 30px;
     border-top: 5px solid #4aaaa5;
     padding-top: 30px;
-    padding-bottom: 5px;
     font-size:16px;
     text-align: center;
-    position: fixed;
-    z-index: 10; 
-    bottom: 0; 
+    position: absolute;
     left: 0;
+    bottom: 0;
+    z-index: 10; 
     width: 100%;
 } 
 .central_section {
     background-image: url("../images/wet_snow.png");
     background-repeat: repeat;
     background-position: center;
-    top: 70px;
+    top: 0;
     width: 100%;
-    padding-bottom: 130px;
-    position: absolute;
+    padding-bottom: 40px;
+    position: relative;
 }
 .content_section{
     background: #ffffff;
     padding: 10px;
-    float: left;
     position: relative;
     top: 30px;
     margin-left:10px;
+    margin-bottom: 100px;
     width: 850px;
     border: 2px solid #dddddd;
 }
-/* .content_section_about {
-    height: 800px;
-} */
-.content_section_portfolio {
-    height: 850px;
-}
-/* .content_section_contact {
-    height: 1000px;
-} */
+
 .content_title_bar {
     border-bottom: 2px solid #dddddd;
     font-size: 26px;
@@ -119,7 +117,6 @@ footer {
     display: table;
 }
 
-
 /* Styling for the About Me Page */
 #profile_picture {
     float:left;
@@ -127,14 +124,28 @@ footer {
 }
 
 /* Styling for the Portfolio Page */
-.portfolio_image{
-    float:left;
-    position:absolute;
-    z-index: 4;
-    height: 225px;
-    width: 300px;
+.image_container{
+    /* background: pink; */
+    float: left;
+    height: 300px;
+    width: 400px;
+    margin: 10px;
 }
-#portfolio_image_1{
+.portfolio_image{
+    position: relative;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    /* height: 225px;
+    width: 300px; */
+    /* margin: 0 auto; */
+    text-align: center;
+    float: left;
+    top: 0;
+    left: 0;
+    /* left:0; */
+}
+/* #portfolio_image_1{
     left: 40px;
     top: 100px;
 }
@@ -157,20 +168,21 @@ footer {
 #portfolio_image_6{
     right: 40px;
     top: 600px;
-}
+} */
 .portfolio_title{
     color: white;
     background: #4aaaa5;
-    width: 300px;
+    width: 100%;
     line-height: 50px;
     font-size: 30px;
     font-family: Georgia, Times, "Times New Roman", serif;
     text-align: center;
-    position: absolute;
+    position: relative;
+    top: -100px;
     float: left;
     z-index: 6;
 }
-#portfolio_title_1{
+/* #portfolio_title_1{
     left: 40px;
     top: 240px;
 }
@@ -193,7 +205,7 @@ footer {
 #portfolio_title_6{
     right: 40px;
     top: 740px;
-}
+} */
 
 
 /* Styling for the Contact Page */
@@ -228,6 +240,9 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #52bdb7;
 }
+
+
+/* Styling for Medium Size Screens */
 @media screen and (max-width: 980px) {
     #links_area {
         float: right;
@@ -237,19 +252,24 @@ input[type=submit]:hover {
     .content_section {
         width: 640px;
     }
-    .content_section_portfolio {
-        height: 820px;
+    .image_container{
+        /* height: 188px; */
+        /* width: 250px; */
+        height: 225px;
+        width: 300px;
+        /* margin: 30px; */
     }
     .portfolio_image{
-        height: 188px;
-        width: 250px;
+        /* height: 188px; */
+        /* width: 250px; */
     }
     .portfolio_title{
-        width: 250px;
+        /* width: 250px; */
+        top: -60px;
         line-height: 30px;
         font-size: 20px;
     }
-    #portfolio_title_1{
+    /* #portfolio_title_1{
         left: 40px;
         top: 220px;
     }
@@ -272,11 +292,13 @@ input[type=submit]:hover {
     #portfolio_title_6{
         right: 40px;
         top: 720px;
-    }
+    } */
 }
+
+/* Styling for Small Sized Screens */
 @media screen and (max-width: 768px) {
     #links_area { 
-        font-size: 16px;
+        font-size: 18px;
     }
     .link{
         padding-bottom: 29px;
@@ -284,14 +306,17 @@ input[type=submit]:hover {
     .content_section {
         width: 530px;
     }
-    .content_section_portfolio {
-        height: 600px;
+    .image_container {
+        height: 188px;
+        width: 250px;
+        margin: 7px;
     }
     .portfolio_image{
-        height: 150px;
-        width: 200px;
+
+        /* height: 150px;
+        width: 200px; */
     }
-    #portfolio_image_1{
+    /* #portfolio_image_1{
         left: 40px;
         top: 80px;
     }
@@ -314,13 +339,14 @@ input[type=submit]:hover {
     #portfolio_image_6{
         right: 40px;
         top: 430px;
-    }
+    } */
     .portfolio_title{
-        width: 200px;
+        /* width: 200px; */
+        top: -48px;
         line-height: 24px;
         font-size: 16px;
     }
-    #portfolio_title_1{
+    /* #portfolio_title_1{
         left: 40px;
         top: 180px;
     }
@@ -343,8 +369,10 @@ input[type=submit]:hover {
     #portfolio_title_6{
         right: 40px;
         top: 530px;
-    }
+    } */
 }
+
+/* Styling for Extra Small Sized Screens */
 @media screen and (max-width: 640px) {
     #top_bar {
         height:140px;
@@ -359,8 +387,9 @@ input[type=submit]:hover {
     }
     #links_area {
         width: 100%;
-        top: 70px;
+        top: 0px;
         left: 0px;
+        font-size: 16px;
         text-align: center;
         margin: 0 auto;
         padding-left: 0px;
@@ -372,31 +401,35 @@ input[type=submit]:hover {
         text-align: center;
     }
     .content_section{
-        top: 80px;
+        top: 10px;
+        width: 85%;
+        margin: 0 auto 60px;
+     }
+    .image_container {
         width: 100%;
-        margin: 0 auto;
+        height: 100%;
+        margin: 0;
+        /* margin-right: 40px; */
+        /* padding-bottom: -25%; */
     }
-    .content_section_about {
-        height: 1000px;
-    }
-    .content_section_portfolio {
-        height: 2150px;
-    }
+    
     .portfolio_image{
-        height: auto;
-        width: 100%;
+        /* height: auto; */
+        /* width: 100%;
         top: auto;
         position: static;
-        margin-bottom: 20px;
+        text-align: center;
+        margin-bottom: 20px; */
     }
       .portfolio_title{
         width: 100%;
         line-height: 30px;
         font-size: 20px;
-        left: 0px;
-        right: 0px;
+        top: -60px;
+        /* left: 0px;
+        right: 0px; */
     }
-    #portfolio_title_1{
+    /* #portfolio_title_1{
         top: 320px;
     }
     #portfolio_title_2{
@@ -413,10 +446,10 @@ input[type=submit]:hover {
     }
     #portfolio_title_6{
         top: 2020px;
-    }
-    .content_section_contact {
+    } */
+    /* .content_section_contact {
     height: 500px;
-}
+} */
 input[type=text], select {
     width: 95%;
     padding: 12px 20px;
