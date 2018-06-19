@@ -84,7 +84,7 @@ footer {
 }
 .content_section{
     background: #ffffff;
-    /* padding: 10px; */
+    padding: 10px;
     float: left;
     position: relative;
     top: 30px;
@@ -366,6 +366,11 @@ input[type=submit]:hover {
         padding-left: 0px;
         padding-right: 0px;
         }
+    .link{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
     .content_section{
         top: 80px;
         width: 100%;
@@ -409,4 +414,27 @@ input[type=submit]:hover {
     #portfolio_title_6{
         top: 2020px;
     }
+    .content_section_contact {
+    height: 500px;
+}
+input[type=text], select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
 }
