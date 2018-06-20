@@ -74,7 +74,7 @@ p{
 }
 
 
-/* Styling for Footer */
+/* Styling for the Footer */
 footer {
     color: lightgray;
     background: #666666;
@@ -288,25 +288,4 @@ input[type=submit]:hover {
         font-size: 20px;
         top: -60px;
     }
-
-/* input[type=text], select {
-    width: 95%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-textarea {
-    width: 95%;
-    height: 150px;
-    padding: 12px 20px;
-    margin: 20px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-} */
-
 }
