@@ -1,12 +1,17 @@
-/* General Formatting for all pages */
+/* General Styling for all pages */
 html {
     position: relative;
     min-height: 100%;
   }
 body {
-    margin: 0;
     position: relative;
+    margin: 0;
   }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 h1{
     color: white;
     font-family: Georgia, Times, "Times New Roman", serif;
@@ -24,7 +29,10 @@ p, label, footer{
 p{
     margin: 16px;
 }
-#top_bar {
+
+
+/* Styling for Navigation Bar */
+.top_bar {
     background:#ffffff;
     height:70px;
     border-bottom: 1px solid #cccccc;
@@ -34,7 +42,7 @@ p{
     width: 100%;
     z-index: 10;
 }
-#name_box {
+.name_box {
     color: white;
     background: #4aaaa5;
     font-size:26px;
@@ -45,7 +53,7 @@ p{
     top: 0px;
     left: 10px;
 }
-#links_area {
+.links_area {
     color: gray;
     font-size:20px;
     text-decoration:none;
@@ -64,6 +72,9 @@ p{
     color: white;
     background-color: #4aaaa5;
 }
+
+
+/* Styling for Footer */
 footer {
     color: lightgray;
     background: #666666;
@@ -79,6 +90,9 @@ footer {
     z-index: 10; 
     width: 100%;
 } 
+
+
+/* Styling for Main Page Body */
 .central_section {
     background-image: url("../images/wet_snow.png");
     background-repeat: repeat;
@@ -98,7 +112,6 @@ footer {
     width: 850px;
     border: 2px solid #dddddd;
 }
-
 .content_title_bar {
     border-bottom: 2px solid #dddddd;
     font-size: 26px;
@@ -111,64 +124,32 @@ footer {
 .text_area{
     line-height: 200%;
 }
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+
 
 /* Styling for the About Me Page */
-#profile_picture {
+.profile_picture {
     float:left;
     padding: 10px;
 }
 
+
 /* Styling for the Portfolio Page */
 .image_container{
-    /* background: pink; */
     float: left;
     height: 300px;
     width: 400px;
     margin: 10px;
 }
 .portfolio_image{
-    position: relative;
-    z-index: 4;
     height: 100%;
     width: 100%;
-    /* height: 225px;
-    width: 300px; */
-    /* margin: 0 auto; */
-    text-align: center;
+    position: relative;
     float: left;
     top: 0;
     left: 0;
-    /* left:0; */
+    z-index: 4;
+    text-align: center;
 }
-/* #portfolio_image_1{
-    left: 40px;
-    top: 100px;
-}
-#portfolio_image_2{
-    right: 40px;
-    top: 100px;
-}
-#portfolio_image_3{
-    left: 40px;
-    top: 350px;
-}
-#portfolio_image_4{
-    right: 40px;
-    top: 350px;
-}
-#portfolio_image_5{
-    left: 40px;
-    top: 600px;
-}
-#portfolio_image_6{
-    right: 40px;
-    top: 600px;
-} */
 .portfolio_title{
     color: white;
     background: #4aaaa5;
@@ -178,34 +159,10 @@ footer {
     font-family: Georgia, Times, "Times New Roman", serif;
     text-align: center;
     position: relative;
-    top: -100px;
     float: left;
+    top: -100px;
     z-index: 6;
 }
-/* #portfolio_title_1{
-    left: 40px;
-    top: 240px;
-}
-#portfolio_title_2{
-    right: 40px;
-    top: 240px;
-}
-#portfolio_title_3{
-    left: 40px;
-    top: 490px;
-}
-#portfolio_title_4{
-    right: 40px;
-    top: 490px;
-}
-#portfolio_title_5{
-    left: 40px;
-    top: 740px;
-}
-#portfolio_title_6{
-    right: 40px;
-    top: 740px;
-} */
 
 
 /* Styling for the Contact Page */
@@ -244,7 +201,7 @@ input[type=submit]:hover {
 
 /* Styling for Medium Size Screens */
 @media screen and (max-width: 980px) {
-    #links_area {
+    .links_area {
         float: right;
         left: auto;
         right: 20px;
@@ -253,51 +210,20 @@ input[type=submit]:hover {
         width: 640px;
     }
     .image_container{
-        /* height: 188px; */
-        /* width: 250px; */
         height: 225px;
         width: 300px;
-        /* margin: 30px; */
-    }
-    .portfolio_image{
-        /* height: 188px; */
-        /* width: 250px; */
     }
     .portfolio_title{
-        /* width: 250px; */
-        top: -60px;
         line-height: 30px;
         font-size: 20px;
+        top: -60px;
     }
-    /* #portfolio_title_1{
-        left: 40px;
-        top: 220px;
-    }
-    #portfolio_title_2{
-        right: 40px;
-        top: 220px;
-    }
-    #portfolio_title_3{
-        left: 40px;
-        top: 470px;
-    }
-    #portfolio_title_4{
-        right: 40px;
-        top: 470px;
-    }
-    #portfolio_title_5{
-        left: 40px;
-        top: 720px;
-    }
-    #portfolio_title_6{
-        right: 40px;
-        top: 720px;
-    } */
 }
+
 
 /* Styling for Small Sized Screens */
 @media screen and (max-width: 768px) {
-    #links_area { 
+    .links_area { 
         font-size: 18px;
     }
     .link{
@@ -311,73 +237,19 @@ input[type=submit]:hover {
         width: 250px;
         margin: 7px;
     }
-    .portfolio_image{
-
-        /* height: 150px;
-        width: 200px; */
-    }
-    /* #portfolio_image_1{
-        left: 40px;
-        top: 80px;
-    }
-    #portfolio_image_2{
-        right: 40px;
-        top: 80px;
-    }
-    #portfolio_image_3{
-        left: 40px;
-        top: 260px;
-    }
-    #portfolio_image_4{
-        right: 40px;
-        top: 260px;
-    }
-    #portfolio_image_5{
-        left: 40px;
-        top: 430px;
-    }
-    #portfolio_image_6{
-        right: 40px;
-        top: 430px;
-    } */
     .portfolio_title{
-        /* width: 200px; */
-        top: -48px;
         line-height: 24px;
         font-size: 16px;
+        top: -48px;
     }
-    /* #portfolio_title_1{
-        left: 40px;
-        top: 180px;
-    }
-    #portfolio_title_2{
-        right: 40px;
-        top: 180px;
-    }
-    #portfolio_title_3{
-        left: 40px;
-        top: 360px;
-    }
-    #portfolio_title_4{
-        right: 40px;
-        top: 360px;
-    }
-    #portfolio_title_5{
-        left: 40px;
-        top: 530px;
-    }
-    #portfolio_title_6{
-        right: 40px;
-        top: 530px;
-    } */
 }
 
 /* Styling for Extra Small Sized Screens */
 @media screen and (max-width: 640px) {
-    #top_bar {
+    .top_bar {
         height:140px;
     }
-    #name_box {
+    .name_box {
         width: 100%;
         left: 0px;
         text-align: center;
@@ -385,7 +257,7 @@ input[type=submit]:hover {
         padding-left: 0px;
         padding-right: 0px;
     }
-    #links_area {
+    .links_area {
         width: 100%;
         top: 0px;
         left: 0px;
@@ -409,48 +281,15 @@ input[type=submit]:hover {
         width: 100%;
         height: 100%;
         margin: 0;
-        /* margin-right: 40px; */
-        /* padding-bottom: -25%; */
     }
-    
-    .portfolio_image{
-        /* height: auto; */
-        /* width: 100%;
-        top: auto;
-        position: static;
-        text-align: center;
-        margin-bottom: 20px; */
-    }
-      .portfolio_title{
+    .portfolio_title {
         width: 100%;
         line-height: 30px;
         font-size: 20px;
         top: -60px;
-        /* left: 0px;
-        right: 0px; */
     }
-    /* #portfolio_title_1{
-        top: 320px;
-    }
-    #portfolio_title_2{
-        top: 660px;
-    }
-    #portfolio_title_3{
-        top: 1000px;
-    }
-    #portfolio_title_4{
-        top: 1340px;
-    }
-    #portfolio_title_5{
-        top: 1680px;
-    }
-    #portfolio_title_6{
-        top: 2020px;
-    } */
-    /* .content_section_contact {
-    height: 500px;
-} */
-input[type=text], select {
+
+/* input[type=text], select {
     width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -468,6 +307,6 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: none;
-}
+} */
 
 }
